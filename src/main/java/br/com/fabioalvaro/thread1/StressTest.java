@@ -43,14 +43,14 @@ public class StressTest {
                         
                         // Se deu 200 OK
                         if (response.statusCode() == 200) {
-                            System.out.printf("Req #%d: SUCESSO (%dms)\n", id, (System.currentTimeMillis() - start));
+                            System.out.printf(" Req #%d: SUCESSO 🍓 (%dms)\n", id, (System.currentTimeMillis() - start));
                         } else {
-                            System.out.printf("Req #%d: ERRO HTTP %d\n", id, response.statusCode());
+                            System.out.printf(" Req #%d: ERRO HTTP 💩 %d\n", id, response.statusCode());
                         }
 
                     } catch (Exception e) {
                         // AQUI ESTÁ A PROVA DO CRIME: Connection Refused ou Timeout
-                        System.err.printf("Req #%d: FALHOU - %s (%dms)\n", id, e.getMessage(), (System.currentTimeMillis() - start));
+                        System.err.printf(" Req #%d: FALHOU 💩  - %s (%dms)\n", id, e.getMessage(), (System.currentTimeMillis() - start));
                     }
                 }));
             }
